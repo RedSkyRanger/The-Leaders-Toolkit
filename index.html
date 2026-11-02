@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+   
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Javascript Variables</title>
+   
+   
+<style>
+/*===============================================|| 🫟(BEGIN) CSS🫟 ||=============================================== */
+body {
+background-color: rgb(6, 59, 0);
+}
+
+h1 {
+text-align: center;
+color: white;
+}
+
+.outerdropdownbox {
+width: 650px;
+margin: 20px auto;
+background-color:  tan;
+border: 3px solid white;
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.innerdropdownbox {
+background-color: tan;
+border: 3px solid white;
+width: 600px;
+margin: auto;
+text-align: center;
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+summary:hover {
+background-color: rgb(6, 59, 0);
+color: white;
+}
+
+summary {
+background-color:  tan;
+text-align: center;
+cursor: pointer;
+padding: 14px;
+font-size: 20px;
+font-weight: bold;
+}
+
+
+.allboxs {
+background-color:  tan;
+text-align: center;
+width: 600px;
+height: 400px;
+margin: 0 auto;
+}
+
+.button {
+padding: 8px 15px;
+font-size: 15px;
+border-radius: 999px;
+background-color: rgb(163, 163, 163);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+background-color: rgb(6, 59, 0);
+color: white;
+}
+
+.terrainchecklist {
+text-align: left;
+padding-left: 20px;
+}
+
+.terrainchecklist input,
+.terrainchecklist label {
+font-size: 20px;
+width: 20px;
+height: 20px;
+}
+
+.js_DivBox {
+text-align: center;
+}
+
+/*===============================================|| 🫟(END) CSS🫟 ||=============================================== */
+</style>
+
+     </head>     
+
+<body>
+<h1>Military Calculators and information</h1>
+
+
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| 🧮(BEGIN) calculators section🧮 ||+++++++++++++++++++++++++++++++++++++++++-->
+<details class="outerdropdownbox">
+  <summary>Army Calculators</summary>
+
+
+
+<!-----|| 🍎(BEGIN) This is the MRE calculator for the home page🍎 ||--------------------------------------------------->
+<details class="innerdropdownbox">
+    <summary>MRE Calculator</summary>
+
+  <div class="allboxs">
+    <label for="soldiers">Number of Soldiers Going to the Field</label>
+    <br>
+    <input type="number" id="soldiers">
+    <br>
+    <br>
+    <label for="mres">MREs Per Day</label>
+    <br>
+    <input type="number" id="mres">
+    <br>
+    <br>
+    <label for="days">How Many Days</label>
+    <br>
+    <input type="number" id="days">
+    <br>
+    <br>
+    <button class="button" id="calculate_button">Press to Calculate</button>
+    <p id="result"></p>
+  </div> 
+</details>
+<!-----|| 🍎(END) This is the MRE calculator for the home page🍎 ||----------------------------------------------------->
+
+
+
+<!-----|| 💧(BEGIN) This is the Water calculator for the home page💧 ||------------------------------------------------->
+          
+        <details class="innerdropdownbox">
+          <summary>Water Calculator</summary>
+          <div class="allboxs">
+            <label for="soldiersgoing">Number of Soldiers Going to the Field,</label>
+            <br>
+            <input type="number" id="soldiersgoing">
+            <br>
+            <br>
+            <label for="water">How many quarts of water per day</label>
+            <br>
+            <input type="number" id="water">
+            <br>
+            <br>
+            <label for="waterdays">How many days</label>
+            <br>
+            <input type="number" id="waterdays">
+            <br>
+            <br>
+            <button class="button" id="waterButton">Press to Calculate</button>
+            <p id=waterResult></p> 
+          </div>
+        </details>
+<!-----|| 💧(END) This is the Water calculator for the home page💧 ||-------------------------------------------------->
+
+
+
+<!-----|| 🦶(BEGIN) This is the Meters to feet calculator for the home page🦶 ||--------------------------------------->
+                        <details class="innerdropdownbox">
+                          <summary>Meters To Feet Calculator</summary>
+                            <div class="allboxs">
+                            <label for="meters">Enter meters</label>
+                            <br>
+                            <input type="number" id="meters">
+                            <br>
+                            <br>
+                            <button class="button" id="metersButton">Convert</button>
+                            <p id="metersResult"></p>
+                            </div>
+                        </details>
+<!-----|| 🦶(END) This is the Meters to feet calculator for the home page🦶 ||--------------------------------------->
+
+
+
+<!-----|| 🦶(BEGIN) This is the Kilometers to Miles calculator for the home page🦶 ||--------------------------------------->
+                                              <details class="innerdropdownbox">
+                                                <summary>Kilometers To Miles Calculator</summary>
+                                                  <div class="allboxs">
+                                                  <label for="km">Enter kilometers</label>
+                                                  <br>
+                                                  <input type="number" id="km">
+                                                  <br>
+                                                  <br>
+                                                  <button class="button" id="kmButton">Convert</button>
+                                                  <p id="kmResult"></p>
+                                                  </div>
+                                              </details>
+<!-----|| 🦶(END) This is the Kilometers to Miles calculator for the home page🦶 ||----------------------------------------->   
+
+
+
+<!-----|| 🔥(BEGIN) This is the time of suppression calculator for the home page🔥 ||--------------------------------------->
+                        <details class="innerdropdownbox">
+                          <summary>Time of Suppression Calculator for M240</summary>
+                            <div class="allboxs">
+                            <label for="roundsAvailable">Enter Number of Linked 7.62 Rounds Available</label>
+                            <br>
+                            <input type="number" id="roundsAvailable">
+                            <br>
+                            <br>
+                            <label for="rapidMinutesWanted">Minutes of Rapid Fire Before Switching</label>
+                            <br>
+                            <input type="number" id="rapidMinutesWanted">
+                            <br>
+                            <br>
+                            <button class="button" id="240button">Press to Calculate</button>
+                            <p id="suppressionResult"></p>
+                            </div>
+                        </details>
+<!-----|| 🔥(END) This is the time of suppression calculator for the home page🔥 ||--------------------------------------->                                               
+
+
+
+</details>
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| 🧮(END) calculators section🧮 ||+++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| ✅(BEGIN) check lists section✅ ||+++++++++++++++++++++++++++++++++++++++++-->
+<details class="outerdropdownbox">
+  <summary>Check Lists</summary>
+
+  <details class="innerdropdownbox">
+    <summary>Terrain Model Check List</summary>
+
+    <div class="terrainchecklist">
+      <input type="checkbox" id="terrain1">
+      <label for="terrain1">->North-seeking arrow</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain2">
+      <label for="terrain2">->Map scale</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain3">
+      <label for="terrain3">->Grid lines</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain4">
+      <label for="terrain4">->Objective location</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain5">
+      <label for="terrain5">->Exaggerated terrain relief and water obstacles</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain6">
+      <label for="terrain6">->Friendly patrol locations</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain7">
+      <label for="terrain7">->Targets (indirect fire including grid and type of round)</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain8">
+      <label for="terrain8">->Primary and alternate routes</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain9">
+      <label for="terrain9">->Planned release points (RPs): objective rally point, linkup rally <br> point, RP</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain10">
+      <label for="terrain10">->Danger areas such roads, trails, and open areas</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain11">
+      <label for="terrain11">->Legend</label>
+      <br>
+      <br>
+
+      <input type="checkbox" id="terrain12">
+      <label for="terrain12">->Blowup of objective area (Micro Terrain Model)</label>
+      <br>
+      <br>
+    </div>
+  </details>
+  
+</details>
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| ✅(END) check lists section✅ ||+++++++++++++++++++++++++++++++++++++++++++-->
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| 🛤️(BEGIN) trackers section🛤️ ||+++++++++++++++++++++++++++++++++++++++++++-->
+
+<details class="outerdropdownbox">
+  <summary>Trackers</summary>
+
+  <details class="innerdropdownbox">
+    <summary>Squad Tracker</summary>
+     <div id="platoonAdminTracker"> <!--linked to JS-->
+      <button id="addPlatoonMember">Add Service Member</button> <!--add a new member button-->
+      <button id="downloadRoster">Press to Download Roster</button>
+
+     </div>
+  </details>
+</details>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++|| 🛤️(END) trackers section🛤️ ||+++++++++++++++++++++++++++++++++++++++++++-->
+
+                          
+<script>
+
+
+//=========================================================|| 🍎(BEGIN) MRE Calculator Function/variables🍎 ||==========================================================================//
+
+// MRE calculator variables
+const soldierInput = document.getElementById('soldiers');
+const perDayInput = document.getElementById('mres');
+const daysInput = document.getElementById('days');
+const finalResult = document.getElementById('result');
+const calButton = document.getElementById('calculate_button');
+
+
+// MRE Calculator Function.
+//  Runs this block of code every time the calculate button is clicked.
+calButton.addEventListener("click", function () {
+
+// Reads the current value from each inpute, converts it from text to a number, and multiples them together.
+// .value always returns text, even for number inputs, so Number() converts
+// each one to an actual number before multiplying (otherwise * could misbehave
+// or produce NaN on unexpected input)
+const totalMRES = Number(soldierInput.value) * Number(perDayInput.value) * Number(daysInput.value);
+const mreboxes = Math.ceil(totalMRES / 12);
+const perSoldier = Number(perDayInput.value) * Number(daysInput.value);
+const totalPerDay = Number(perDayInput.value) * Number(daysInput.value);
+
+
+// Displays the result on the page by setting the text inside the result paragraph.
+finalResult.innerHTML = "🍎Total MREs needed: " + totalMRES + "<br>" +
+                        "🍎Total boxes needed: " + mreboxes + "<br>" +
+                        "🍎MREs per soldier: " + perSoldier + "<br>" +
+                        "🍎Total MREs consumed each day: " + totalPerDay;
+
+
+})
+
+//==========================================================|| 🍎(END) MRE Calculator Function/variables🍎 ||=========================================================================//
+
+//==========================================================|| 💧(BEGIN) Water Calculator Function/variables💧 ||=========================================================================//
+
+          //water  calculator variables
+          const numberOfSoldiers = document.getElementById("soldiersgoing");
+          const waterPer = document.getElementById("water");
+          const daysGone = document.getElementById("waterdays");
+          const calWater = document.getElementById("waterButton")
+          const finalResultWater = document.getElementById("waterResult")
+          
+          
+          calWater.addEventListener("click", function() {
+
+          const totalQuarts = Number(numberOfSoldiers.value) * Number(waterPer.value) * Number(daysGone.value);
+          const quartsPerSoldier = Number(waterPer.value) * Number(daysGone.value);
+          const totalGallons = (totalQuarts / 4).toFixed(2);
+          const cansNeeded = Math.ceil(Number(totalGallons) / 5);
+          const buffaloesNeeded = Math.ceil(Number(totalGallons) / 400);
+
+          finalResultWater.innerHTML = "💧Total water needed (Quarts): " + totalQuarts + "<br>" +
+                                       "💧Quarts per soldier: " + quartsPerSoldier + "<br>" +
+                                       "💧Total water needed (Gallons): " + totalGallons + "<br>" +
+                                       "💧Water cans needed (5 gal each): " + cansNeeded + "<br>" +
+                                       "💧Water buffaloes needed (400 gal each): " + buffaloesNeeded;
+
+          })
+
+          
+//==========================================================|| 💧(END) Water Calculator Function/variables💧 ||=========================================================================//
+
+
+
+// Meters to feet
+const metersInput = document.getElementById("meters");
+const metersButton = document.getElementById("metersButton");
+const metersResult = document.getElementById("metersResult");
+
+metersButton.addEventListener("click", function() {
+  const feet = Number(metersInput.value) * 3.28084;
+  metersResult.textContent = metersInput.value + " meters = " + feet.toFixed(2) + " feet";
+});
+
+// Kilometers to miles
+const kmInput = document.getElementById("km");
+const kmButton = document.getElementById("kmButton");
+const kmResult = document.getElementById("kmResult");
+
+kmButton.addEventListener("click", function() {
+  const miles = Number(kmInput.value) * 0.621371;
+  kmResult.textContent = kmInput.value + " km = " + miles.toFixed(2) + " miles";
+});
+
+
+//==========================================================|| 🔥(BEGIN) Rate of Fire Calculator Function/variables🔥 ||=========================================================================//
+
+
+const roundsAvailable = document.getElementById("roundsAvailable");
+const rapidMinutesWanted = document.getElementById("rapidMinutesWanted");
+const suppressionButton = document.getElementById("240button");
+const suppressionResult = document.getElementById("suppressionResult");
+
+suppressionButton.addEventListener("click", function() {
+
+  const totalRounds = Number(roundsAvailable.value);
+  const rapidMinutes = Number(rapidMinutesWanted.value);
+
+  const roundsUsedAtRapid = rapidMinutes * 200; // rapid rate = 200 rds/min
+
+  if (roundsUsedAtRapid >= totalRounds) {
+    suppressionResult.innerHTML = "⚠️ You don't have enough rounds for " + rapidMinutes + " minutes at rapid rate. You'd run dry at " + (totalRounds / 200).toFixed(1) + " minutes.";
+    return;
+  }
+
+  const roundsRemaining = totalRounds - roundsUsedAtRapid;
+  const sustainedMinutes = roundsRemaining / 100; // sustained rate = 100 rds/min
+  const sustMin = Math.floor(sustainedMinutes);
+  const sustSec = Math.round((sustainedMinutes - sustMin) * 60);
+
+  suppressionResult.innerHTML =
+                              "🔥 Rapid rate for " + rapidMinutes + " min uses " + roundsUsedAtRapid + " rounds<br>" +
+                              "🔥 Rounds remaining: " + roundsRemaining + "<br>" +
+                              "🔥 Remaining rounds at sustained rate will last: " + sustMin + " min " + sustSec + " sec";
+});
+
+//==========================================================|| 🔥(END) rate of Fire Calculator Function/variables🔥 ||=========================================================================//
+
+//==========================================================|| (BEGIN) platoon admin tracker [array/function] ||=====================================================================================//
+
+
+//The empty Array for platoon admin tracker//
+const Array1_platoonAdminTracker = [];
+
+//variabls linked to the div tag//
+const Container_platoonAdminTracker = document.getElementById("platoonAdminTracker");
+const Button_addToPlatoon = document.getElementById("addPlatoonMember");
+
+//function that adds the inputs to the platton admin array//
+function addToPlatoon_function () {
+Array1_platoonAdminTracker.push(
+  {dutyPosition_Array: "", rank_Array: "", lastName_Array: "", firstName_Array: ""}
+);
+
+
+const index_platoonAdminTracker = Array1_platoonAdminTracker.Length - 1;
+
+//displays input information on the html page//
+Container_platoonAdminTracker.insertAdjacentHTML("beforeend", `
+     <div class="js_DivBox">
+      <input type="text" id="dutyposition${index_platoonAdminTracker}" placeholder="SM Duty Position">
+      <br>
+
+      <input type="text" id="rank${index_platoonAdminTracker}" placeholder="Rank">
+      <br>
+
+      <input type="text" id="lastname${index_platoonAdminTracker}" placeholder="Last Name">
+      <br>
+
+      <input type="text" id="firstname${index_platoonAdminTracker}" placeholder="First Name">
+      <br>
+     </div>
+ `);
+}
+
+addToPlatoon_function();
+Button_addToPlatoon.addEventListener("click", addToPlatoon_function);
+//==========================================================|| (END) array for platoon admin tracker ||=========================================================================//
+
+</script>
+</body>
+
+
+</html>
